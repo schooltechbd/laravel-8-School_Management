@@ -14,7 +14,12 @@ class CreateSchoolsTable extends Migration
     public function up()
     {
         Schema::create('schools', function (Blueprint $table) {
-            $table->id();
+            $table->string('name')->nullable();
+            $table->date('establish_date')->nullable();
+            $table->text('address')->nullable();
+            $table->text('phone')->nullable();
+            $table->text('fax')->nullable();
+            $table->text('logo')->nullable();
             $table->timestamps();
         });
     }

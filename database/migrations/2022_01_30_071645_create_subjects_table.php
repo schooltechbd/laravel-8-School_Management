@@ -14,7 +14,13 @@ class CreateSubjectsTable extends Migration
     public function up()
     {
         Schema::create('subjects', function (Blueprint $table) {
-            $table->id();
+            $table->string('name')->nullable();
+            $table->string('code')->nullable();
+            $table->string('credit')->nullable();
+            $table->string('hour')->nullable();
+            $table->integer('assignment_percentage')->nullable();
+            $table->integer('final_percentage')->nullable();
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }

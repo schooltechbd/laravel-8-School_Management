@@ -15,6 +15,16 @@ class CreateClassRoutingsTable extends Migration
     {
         Schema::create('class_routings', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('level_id')->nullable();
+            $table->foreignId('grade_id')->nullable();
+            $table->foreignId('class_id')->nullable();
+            $table->foreignId('session_id')->nullable();
+            $table->foreignId('subject_id')->nullable();
+            $table->foreignId('day_id')->nullable();
+            $table->foreignId('shift_id')->nullable();
+            $table->foreignId('time_id')->nullable();
+            $table->foreignId('section_id')->nullable();
+            $table->foreignId('user_id')->nullable();
             $table->timestamps();
         });
     }
