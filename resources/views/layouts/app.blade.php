@@ -38,6 +38,7 @@
     <link href="{{ asset('jambasangsang/assets/css/lib/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('jambasangsang/assets/css/lib/helper.css') }}" rel="stylesheet">
     <link href="{{ asset('jambasangsang/assets/css/style.css') }}" rel="stylesheet">
+    @stack('style')
 </head>
 
 <body>
@@ -92,6 +93,9 @@
         <script src="{{ asset('jambasangsang/assets/js/lib/owl-carousel/owl.carousel-init.js') }}"></script>
         <!-- scripit init-->
         <script src="{{ asset('jambasangsang/assets/js/dashboard2.js') }}"></script>
+
+        @stack('script')
+
 
 </body>
 
